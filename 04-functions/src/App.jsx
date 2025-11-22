@@ -13,7 +13,11 @@ const App = () => {
     <div onWheel={(ele)=>{
       pagescrolling(ele.deltaY)
     }}>
-      <div className='page1'></div>
+      <div className='page1' onChange={(ele)=>{
+        console.log(ele.target.value)
+      }}>
+        <input type="text" placeholder='Enter your name' />
+      </div>
       <div className='page2'></div>
       <div className='page3'></div>
     </div>
